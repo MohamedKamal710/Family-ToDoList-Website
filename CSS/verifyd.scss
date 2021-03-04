@@ -1,0 +1,326 @@
+html{
+    --header-Color : #1facc5;
+    --backgroundImage: url("bg.jpg");
+    --middivBackgroundColor: rgba(255, 255, 255, 0.493);
+    --labelColor:black;
+    --h1Color: darkblue;
+    --footHeadColor : #415d92  ;
+    --buttonColor:#0275d8;
+    --messageColor:blue;
+    --sentLinkColor:rgb(31, 18, 211);
+
+}
+
+html[data-theme='dark']{
+    --header-Color : #070808;
+    --backgroundImage: url("darkBackground.png");
+    --middivBackgroundColor: rgba(54, 54, 54, 0.151);
+    --labelColor:white;
+    --h1Color: rgb(221, 26, 26);
+    --footHeadColor : #292b2c;
+    --buttonColor:rgb(221, 26, 26);
+    --messageColor:rgb(255, 247, 247);
+    --sentLinkColor:rgb(255, 247, 247);
+
+
+}
+
+body{
+    background-image: var(--backgroundImage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+
+      #foot{
+        position: fixed;
+        left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: var(--footHeadColor) !important;
+        height: 60px;
+        color: white;
+    }
+    #emailSent{
+        color: var(--sentLinkColor);
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      position: relative;
+      display: none;
+    }
+
+    #parag{
+        color:var(--messageColor);
+      text-align: center;
+      font-size: large;
+      font-weight: 100;
+      position: relative;
+      right: 15px;
+
+    }
+      #middiv{
+          background: var(--middivBackgroundColor);
+          color : rgb(0, 0, 0);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          align-self: center;
+          align-content: center;
+          align-items: center;
+          box-shadow: 0 5px 15px rgba(0,0,0,.5);
+          width: 520px;
+          height: 520px;
+          margin: auto;
+          border: 4px solid white;
+          border-color: white;
+          border-radius: 25px;
+          margin-top: 50px;
+      
+        .btn{
+            background-color: var(--buttonColor) !important;
+        }
+
+        h1{
+            color:var(--h1Color) !important;
+        }
+      
+        }
+
+    
+
+      #form1{
+          padding-top: 40px;
+          padding-left: 40px;
+      }
+      .container {
+        position: absolute;
+      }
+      #form1 i{
+        position: relative;
+        visibility: hidden;
+        
+      }
+      .form-control{
+        min-width: 90%;
+        max-width: 90%;
+      }
+
+
+      #icon1{
+        color: rgb(11, 216, 11);
+        
+      }
+      #icon2{
+        color: red;
+        
+      }
+      #form-group {
+        margin-top : -2em;
+      }
+      #first{
+    
+        background-color: var(--footHeadColor) !important;
+        text-align: center;
+        height: 75px;
+        width :100%;
+      }
+    
+
+      #Registertitle{
+        font-family: monospace;
+        position: relative;
+         top: 50px;
+         font-size: 4em;
+      }
+     
+      @font-face {
+        font-family: font2;
+        src: url(Aeriozdemo-987B.otf);
+      }
+
+      /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+      @media screen and (max-width: 500px) {
+        #middiv{
+          width : 90%;
+          align-content: center;
+          align-items: center;
+          
+        }
+        
+        #regBut{
+          text-align: center;
+          left: 3.5em;
+        }
+        #form1 {
+          left : 5em;
+          padding-left: 40px;
+        }
+        
+        /* #success{
+          left:-12px;
+        } */
+        body {
+          background-size: 500%;
+        }
+        .form-control {
+          min-width: 90%;
+          max-width: 90%;
+        }
+
+        .image{
+          display: none;
+        }
+    
+      }
+      @media screen and (max-width: 800px){
+        #form1 {
+          left : 5em;
+          padding-left: 40px;
+        }
+      }
+
+      
+      
+      .image{
+        position: absolute;
+        left:0px;
+        top: 0;
+    left: 0;
+    }
+    
+      .header a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 6px;
+        border-radius: 4px;
+      }
+      .header a.logo {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      
+    
+      /* Change the background color on mouse-over */
+      .header a:hover {
+        background-color: RGB(0, 140, 160);
+        color: white;
+      }
+      
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: rgb(32, 32, 32);
+        color: white;
+      }
+      
+      /* Float the link section to the right */
+      .header-right {
+        float: right;
+      }
+      .header {
+        overflow: hidden;
+        background-color: var(--header-Color);
+        padding: 20px 10px;
+      }
+
+      
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  
+    em {
+      margin-left: 1%;
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 60px;
+    margin-top:20px;
+    margin-left:10%;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  @media only screen and (max-width:1300px){
+    .theme-switch {
+      margin-left:15%;
+  }
+  }
+  
+  @media only screen and (max-width:950px){
+  .theme-switch {
+    margin-left:18%;
+  }
+  }
+
+  @media only screen and (max-width:775px){
+    .theme-switch {
+      margin-left:22%;
+    }
+    }
+
+    @media only screen and (max-width:620px){
+      .theme-switch {
+        margin-left:25%;
+      }
+      }
+
+      html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+      transition: all 750ms !important;
+      transition-delay: 0 !important;
+  }

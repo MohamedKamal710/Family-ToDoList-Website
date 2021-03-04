@@ -1,0 +1,332 @@
+html {
+  --header-Color: #1facc5;
+  --backgroundImage: url("bg.jpg");
+  --footTextColor: white;
+  --middivBackgroundColor: rgba(255, 255, 255, 0.493);
+  --labelColor:black;
+  --footHeadColor: #415d92  ;
+  --buttonColor:#0275d8;
+  --succesColor:rgb(29, 170, 29);
+  --optionalColor:gray;
+  --h1Color:darkblue;
+}
+
+html[data-theme='dark'] {
+  --header-Color: #070808;
+  --backgroundImage: url("darkBackground.png");
+  --footTextColor: white;
+  --middivBackgroundColor: rgba(54, 54, 54, 0.151);
+  --labelColor:white;
+  --footHeadColor: #292b2c;
+  --buttonColor:rgb(221, 26, 26);
+  --succesColor:rgb(55, 38, 212);
+  --optionalColor:rgba(233, 230, 230, 0.884);
+  --h1Color: rgb(221, 26, 26);
+}
+
+body {
+  background-image: var(--backgroundImage);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrong {
+  color: red;
+  font-weight: 600;
+  position: relative;
+  text-align: auto;
+  /* left: 60px; */
+}
+
+#foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--footHeadColor) !important;
+  height: 60px;
+  color: white;
+}
+
+#middiv {
+  background: var(--middivBackgroundColor);
+  color: var(--labelColor);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 670px;
+  margin: auto;
+  border: 4px solid white;
+  border-color: white;
+  border-radius: 25px;
+  margin-top: 50px;
+}
+
+#middiv #success {
+  position: relative;
+  text-align: auto;
+  background-color: var(--succesColor) !important;
+  color: white;
+  left: 30px;
+  display: none;
+}
+
+#middiv .btn {
+  background-color: var(--buttonColor);
+}
+
+#middiv .optional {
+  color: var(--optionalColor) !important;
+}
+
+#middiv h1 {
+  color: var(--h1Color) !important;
+}
+
+#form1 {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.container {
+  position: absolute;
+}
+
+#form1 i {
+  position: relative;
+  visibility: hidden;
+}
+
+.form-control {
+  min-width: 90%;
+  max-width: 90%;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 1%;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#icon1 {
+  color: #0bd80b;
+}
+
+#icon2 {
+  color: red;
+}
+
+#form-group {
+  margin-top: -2em;
+}
+
+#first {
+  background-color: var(--footHeadColor) !important;
+  text-align: center;
+  height: 75px;
+  width: 100%;
+}
+
+#Registertitle {
+  font-family: monospace;
+  position: relative;
+  top: 50px;
+  font-size: 4em;
+}
+
+@font-face {
+  font-family: font2;
+  src: url(Aeriozdemo-987B.otf);
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  #middiv {
+    width: 90%;
+    -ms-flex-line-pack: left;
+        align-content: left;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+  #form1 {
+    left: 5em;
+    padding-left: 40px;
+  }
+  #success {
+    left: -12px;
+  }
+  body {
+    background-size: 500%;
+  }
+  .form-control {
+    min-width: 90%;
+    max-width: 90%;
+  }
+  .image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #form1 {
+    left: 5em;
+    padding-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .theme-switch {
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .theme-switch {
+    margin-left: 18%;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .theme-switch {
+    margin-left: 22%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .theme-switch {
+    margin-left: 25%;
+  }
+}
+
+.image {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  left: 0;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 6px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: RGB(0, 140, 160);
+  color: white;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #202020;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+.header {
+  overflow: hidden;
+  background-color: var(--header-Color);
+  padding: 20px 10px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
+}
+/*# sourceMappingURL=registerDesign.css.map */

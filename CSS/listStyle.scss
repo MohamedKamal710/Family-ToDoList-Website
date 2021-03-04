@@ -1,0 +1,465 @@
+html{
+    --header-Color : #1facc5;
+    --backgroundImage: url("bg.jpg");
+    --footTextColor: white;
+    --middivBackgroundColor: rgba(255, 255, 255, 0.24);
+    --labelColor:black;
+    --h1Color: RGB(0,131,161);
+    --footHeadColor : #415d92  ;
+    --aColor: blue;
+    --buttonColor:#0275d8;
+    --tableColor:white;
+    --colorToPurchase:rgba(0, 0, 0, 0.5);
+    --theadbackground: #f7f7f7 ;
+    --dropDownBackground: #49a4b4;
+
+}
+
+html[data-theme='dark']{
+    --header-Color : #070808;
+    --backgroundImage: url("darkBackground.png");
+    --footTextColor: white;
+    --middivBackgroundColor: rgba(54, 54, 54, 0.151);
+    --labelColor:white;
+    --h1Color: rgb(221, 26, 26);
+    --aColor: rgb(247, 235, 234);
+    --footHeadColor : #292b2c;
+    --buttonColor:rgb(221, 26, 26);
+    --tableColor:rgb(63, 63, 63);
+    --colorToPurchase:rgba(255, 250, 250, 0.822);
+    --theadbackground: #292b2c;
+    --dropDownBackground: #171a1a;
+
+}
+html,body{
+    height:100%;
+}
+body{
+  margin-bottom: 5rem;
+}
+
+.flex-fill {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+      flex: 1;
+}
+#first{
+    
+    background-color: var(--footHeadColor) !important;
+    text-align: center;
+    height: 75px;
+    width :100%;
+  }
+
+  #ErrorLabel{
+      color: red;
+      display:none;
+
+  }
+#foot{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    background-color: var(--footHeadColor) !important;
+    color: var(--footTextColor) !important;
+
+}
+
+#background{
+  margin-bottom : 3rem;
+}
+
+
+.marg1{
+    position: absolute;
+    clip: rect(0, 100px, 200px, 0);
+    background: var(--backgroundImage);
+    background-size: cover;
+}
+
+#mid{
+    padding-top: 5px;
+    background-color: var(--tableColor);
+    overflow: auto;
+
+
+    .btn-primary{
+        background-color: var(--buttonColor);
+    }
+
+    label{
+        color:var(--labelColor);
+    }
+
+    #T-head{
+        color: var(--labelColor) !important;
+        background-color: var(--theadbackground) !important;
+    }
+    .table{
+        color: var(--labelColor);
+    }
+    span{
+      color:var(--colorToPurchase) !important;
+  }
+  #border{
+      border-color:var(--colorToPurchase) !important;
+  }
+}
+
+
+#ListAdded{
+  color:rgb(0, 201, 17) !important;
+  display:none;
+}
+
+
+.modal{
+    .modal-content {
+        background-color: var(--theadbackground) !important;
+       
+     }
+    
+    h5{
+        color:var(--labelColor);
+
+    }
+    label{
+        color: var(--labelColor);
+    }
+    .btn{
+        background-color: var(--buttonColor);
+    }
+      
+}
+
+ .exitButton{
+      color: var(--labelColor);
+
+    }
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  
+    em {
+      margin-left: 1%;
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 60px;
+    margin-top:20px;
+    margin-left:10%;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.image{
+    position: absolute;
+    left:0px;
+    top: 0;
+}
+.navbar-dark a:hover{
+    background-color: RGB(0, 140, 160);
+    color: white;
+}
+.marg{
+    background-attachment: fixed;
+    
+    background: var(--backgroundImage) no-repeat right ;
+    background-size: cover;
+}
+@media only screen and (max-width:720px){
+
+    .image{
+        display: none;
+    }
+
+    #marg {
+      display: none;
+      width : 0%;
+    }
+    #mid{
+      width : 100%;
+    }}
+    @media only screen and (max-width:497px){
+
+    .header {
+      height: 120px !important;}
+    }
+  
+    @media only screen and (max-width:1300px){
+      .theme-switch {
+        margin-left:15%;
+    }
+  }
+
+  @media only screen and (max-width:950px){
+    .theme-switch {
+      margin-left:18%;
+  }
+}
+// .topnav a {
+//     float: left;
+//     color: white;
+//     text-align: center;
+//     padding: 12px;
+//     text-decoration: none;
+//     font-size: 18px;
+//     line-height: 6px;
+//     border-radius: 4px;
+//   }
+
+//   .topnav a.logo {
+//     font-size: 30px;
+//     font-weight: bold;
+//   }
+  
+
+//   /* Change the background color on mouse-over */
+//   .topnav a:hover {
+//     background-color: RGB(0, 140, 160);
+//     color: white;
+//   }
+  
+//   /* Style the active/current link*/
+//   .topnav a.active {
+//     background-color: rgb(27, 27, 27);
+//     color: white;
+//   }
+
+//   /* Float the link section to the right */
+//   .header-right {
+//     float: right;
+//   }
+//   .topnav {
+//     height: 70px;
+//     // overflow: hidden;
+//     background-color: var(--header-Color);
+//     padding: 20px 10px;
+//   }
+
+// // DROP DOWN
+//   .dropdown {
+//     float: left;
+//     overflow: visible;
+    
+//   }
+  
+//   /* Dropdown button */
+//   .dropdown .dropbtn {
+//     font-size: 18px;
+//     border: none;
+//     outline: none;
+//     color: white;
+//     background-color: inherit;
+//     font-family: inherit; /* Important for vertical align on mobile phones */
+//     margin: 0; /* Important for vertical align on mobile phones */
+//   }
+  
+//   /* Add a red background color to navbar links on hover */
+//   .navbar a:hover, .dropdown:hover .dropbtn {
+//     background-color: RGB(0, 140, 160);
+//     color: white;  }
+  
+//   /* Dropdown content (hidden by default) */
+//   .dropdown-content {
+//     display: none;
+//     position: absolute;
+//     background-color: var(--dropDownBackground);
+//     min-width: 160px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     z-index: 1;
+//   }
+  
+//   /* Links inside the dropdown */
+//   .dropdown-content a {
+//     float: none;
+//     color: white;
+//     padding: 12px 16px;
+//     text-decoration: none;
+//     display: block;
+//     text-align: left;
+//   }
+  
+//   /* Add a grey background color to dropdown links on hover */
+//   .dropdown-content a:hover {
+//     background-color:  RGB(0, 140, 160);
+//   }
+  
+//   /* Show the dropdown menu on hover */
+//   .dropdown:hover .dropdown-content {
+//     display: block;
+//   }
+ 
+ 
+.topnav {
+  // overflow: hidden;
+  height:60px;
+  background-color: var(--header-Color);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.header-right{
+  float: right;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  // overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropDownBackground);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--dropDownBackground);
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .dropdown{
+    overflow: hidden;
+  }
+  .topnav{
+    overflow: hidden;
+    height: auto;
+  }
+  .header-right{
+    float:left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+      transition: all 750ms !important;
+      transition-delay: 0 !important;
+  }
